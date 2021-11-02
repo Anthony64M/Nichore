@@ -11,9 +11,9 @@ See a <b>[Plunker](http://plnkr.co/akHTslTdRMvfe3KrnPeO)</b>
 * [Angular Imgur API](https://github.com/gigablox/angular-imgur-api) for dynamic images.
 * [Angular-Masonry](https://github.com/passy/angular-masonry) directive.
 
-## Getting Started
+<!-- ## Getting Started
 Clone the repository  
-`git clone git@github.com:gigablox/angular-art-gallery.git`    
+`git clone git@github.com:gigablox/angular-art-gallery.git`     -->
 
 ### Compiled Examples
 These are ready to go for development and production environments. 
@@ -29,13 +29,13 @@ This AngularJS project is wrapped in commonly used front end development tools t
 `bower install`  
 `npm install -g grunt-cli`
 
-#### Get an Imgur API key
+<!-- #### Get an Imgur API key
 [Get an Imgur API key](https://api.imgur.com/) and add it to your `app.config`  
 
     <!-- $imgurGlobalProvider.options({
         apiKey:'1234567890abcdefgh',
         account:'YourAccountName'
-    }); -->
+    }); --> -->
 
 #### Build with Grunt
 `grunt package:dev`  
