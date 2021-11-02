@@ -1,27 +1,83 @@
 # Nichore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+Nichore application using dynamic API data built with AngularJS
 
-## Development server
+See a <b>[Plunker](http://plnkr.co/akHTslTdRMvfe3KrnPeO)</b>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features
+<!-- * [Masonry 3](http://masonry.desandro.com/) for mason blocking images. -->
+* [Bootstrap 4](https://github.com/twitter/bootstrap/tree/3.0.0-wip) for responsive layout.
+* [ngCookies](https://github.com/angular/code.angularjs.org/tree/master/1.1.5) for stateful experience.
+* [Angular Imgur API](https://github.com/gigablox/angular-imgur-api) for dynamic images.
+* [Angular-Masonry](https://github.com/passy/angular-masonry) directive.
 
-## Code scaffolding
+## Getting Started
+Clone the repository  
+`git clone git@github.com:gigablox/angular-art-gallery.git`    
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Compiled Examples
+These are ready to go for development and production environments. 
 
-## Build
+`/examples/development`  
+`/examples/production`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Build Your Own
+This AngularJS project is wrapped in commonly used front end development tools to save you time. Development and production environments are configured to inject static assets managed by bower. Production build concats and compresses.
+#### Install the dependencies  
+`cd angular-art-gallery`  
+`npm install`  
+`bower install`  
+`npm install -g grunt-cli`
 
-## Running unit tests
+#### Get an Imgur API key
+[Get an Imgur API key](https://api.imgur.com/) and add it to your `app.config`  
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    <!-- $imgurGlobalProvider.options({
+        apiKey:'1234567890abcdefgh',
+        account:'YourAccountName'
+    }); -->
 
-## Running end-to-end tests
+#### Build with Grunt
+`grunt package:dev`  
+`grunt package:dev:watch`  
+`grunt package:prod`
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+### Nginx/Apache
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+#### Point your doc-root
+`/build/development`  
+`/build/production`
+
+#### pushState Support
+Nginx pushState `server{}` rules
+<pre>
+# Need this for $locationProvider.html5Mode(true);
+location / {
+    try_files $uri /index.html;
+}
+</pre>
+
+Apache pushState `.htaccess` rules
+<pre>
+    #Need this for $locationProvider.html5Mode(true);
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !index
+    RewriteRule (.*) index.html [L]
+</pre>
+
+Here are more complete rules for both [Nginx]() and [Apache]()
+
+
+### Node Server
+
+Build your package and point the node server to `/build/<environment>`    
+
+`node web-server.js`  
+[http://127.0.0.1:8000/index.html](http://127.0.0.1:8000/index.html)
+
+
+## License
+Copyright (c) 2013 Daniel Kanze (@gigablox) Licensed under the MIT License.
