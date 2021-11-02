@@ -80,4 +80,4 @@ Build your package and point the node server to `/build/<environment>`
 
 
 ## License
-Copyright (c) 2013 Daniel Kanze (@gigablox) Licensed under the MIT License.
+Copyright (c) 2021 Anthony64M Licensed under the MIT License.
