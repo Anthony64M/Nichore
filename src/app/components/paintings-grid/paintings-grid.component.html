@@ -1,0 +1,16 @@
+<div class="paintings-grid-container">
+    <div *ngFor="let paint of paintings | async | searchFilter: query">
+        <div class="card">
+            <div class="image-box">
+              <img rel="preload" src="{{paint.webImage.url}}">
+            </div>
+            <div class="painting-details">
+              <h3><a [routerLink]="['/paintings', paint.id]">{{paint.title}}</a></h3>
+              <p><b>By:</b> {{paint.principalOrFirstMaker}}</p>
+              <p><b>Plate:</b> {{paint.longTitle}}</p>
+              <div class="link-box"><span><a [routerLink]="['/paintings', paint.id]"><b>DETAILS</b></a></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+

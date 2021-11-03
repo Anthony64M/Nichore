@@ -1,0 +1,67 @@
+<section>
+        <div class="about-container" *ngIf="painting$ | async as painting">
+            <div class="polaroid">
+                <img src="{{painting.webImage.url}}" alt="{{painting.title}}">
+                <div class="caption">{{painting.title}}</div>
+            </div>
+            <div class="about-text">
+                <div class="author-name" (mouseover)="hovered = true" (mouseout)="hovered = false"><h4>Author :</h4><p>{{painting.principalOrFirstMaker}} (more details)</p></div>
+                <div *ngIf="paintingDetails$ | async as paintingDetails">
+                    <h4>Type :</h4><p>{{paintingDetails.artObject.objectTypes[0]}}</p>
+                    <h4>Description :</h4><p>{{paintingDetails.artObject.plaqueDescriptionEnglish}}</p>
+                    <h4>Location in the museum :</h4><p>{{paintingDetails.artObject.location}}</p>
+                    <h4>Date :</h4><p>{{paintingDetails.artObject.label.date}}</p>
+                </div>
+                <div *ngIf="paintingDetails$ | async as paintingDetails">
+                    <div *ngIf="hovered" class="author-details">
+                        <div id="id-card">
+                            <div class="id-card material-ui-shadow">
+                              <div class="id-card__mugshot">
+                                <img src="../../../assets/images/painter-avatar.png" id="id-card-mugshot">
+                              </div>
+                              <div class="id-card__logo logo">
+                                <span class="logo__big">RIJKS-CREW</span>
+                              </div>
+                              <div class="id-card__banner">
+                                <span class="id-card__banner-text">CREATOR nr "{{paintingDetails.artObject.id}}"</span>
+                              </div>
+                              <div class="id-card__details">
+                                <div class="id-card__detail">
+                                  <span class="id-card__detail-label">Name</span>
+                                  <span class="id-card__detail-value">{{paintingDetails.artObject.principalMakers[0].name}}</span>
+                                </div>
+                                <div class="id-card__detail">
+                                  <span class="id-card__detail-label">Date of Birth</span>
+                                  <span class="id-card__detail-value">{{paintingDetails.artObject.principalMakers[0].dateOfBirth}} ({{paintingDetails.artObject.principalMakers[0].placeOfBirth}})</span>
+                                </div>
+                                <div class="id-card__detail">
+                                  <span class="id-card__detail-label">Date of Death</span>
+                                  <span class="id-card__detail-value">{{paintingDetails.artObject.principalMakers[0].dateOfDeath}} ({{paintingDetails.artObject.principalMakers[0].placeOfDeath}}) </span>
+                                </div>
+                                <div class="id-card__detail">
+                                  <span class="id-card__detail-label">Release Date of the artpiece</span>
+                                  <span class="id-card__detail-value">{{paintingDetails.artObject.label.date}}</span>
+                                </div>
+                              </div>
+                              <div class="id-card__details id-card__details--short">
+                                <div class="id-card__detail">
+                                  <span class="id-card__detail-label">Gender</span>
+                                  <span class="id-card__detail-value">M</span>
+                                </div>
+                                <div class="id-card__detail">
+                                  <span class="id-card__detail-label">Occupations</span>
+                                  <span class="id-card__detail-value">{{paintingDetails.artObject.principalMakers[0].occupation}}</span>
+                                </div>
+                                <br/>
+                                <div class="id-card__detail">
+                                  <span class="id-card__detail-label">Nationality</span>
+                                  <span class="id-card__detail-value">{{paintingDetails.artObject.principalMakers[0].nationality}}</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                    </div>    
+                </div>
+            </div>
+        </div>
+</section>

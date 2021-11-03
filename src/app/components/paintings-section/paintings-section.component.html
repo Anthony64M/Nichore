@@ -1,0 +1,5 @@
+<section>
+    <h2>Search by paintings</h2>
+    <app-paintings-search-bar (query)="setQuery($event)"></app-paintings-search-bar>
+    <app-paintings-grid [query]="query"></app-paintings-grid>
+</section>

@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap");
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.search-input {
+  font-family: "FontAwesome";
+  width: 30em;
+  height: 3em;
+  padding: .5em 1em;
+  font-size: 18px;
+  background: white;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+/*# sourceMappingURL=paintings-search-bar.component.css.map */

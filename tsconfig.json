@@ -1,35 +1,24 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es6",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@lib/*": ["./src/components/ArtsyLib/*"],
-      "@interfaces/*": ["src/interfaces/*"],
-      "@components/*": ["./src/components/*"],
-      "@database/*": ["./src/server/database/*"],
-      "@errors": ["./src/server/controllers/errors"],
-      "@controllers/*": ["./src/server/controllers/*"],
-      "@middlewares/*": ["./src/server/middlewares/*"],
-      "@entities/*": ["./src/server/entities/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@server/*": ["./src/server/*"],
-      "@services/*": ["./src/services/*"]
-    },
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "strict": true,
+    "lib": [
+      "es2018",
+      "dom"
+    ]
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "mikro-orm.config.ts"],
-  "exclude": ["node_modules"]
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false
+  }
 }

@@ -1,0 +1,70 @@
+@import '../../../styles.scss';
+
+section{
+    padding: 5em 5em;
+
+    .about-container{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .polaroid{
+            background: $white;
+            padding: 1rem;
+            box-shadow: 0 0.2rem 1.2rem rgba(0,0,0,0.2);
+            width: 40%;
+            filter: grayscale(100%);
+            transform: rotate(5deg);
+            transition: all 0.35s;
+
+            &:hover{
+                transform: scale(1.2, 1.2) rotate(0deg);
+                filter: grayscale(0%) contrast(150%);
+            }
+
+            img{
+                max-width: 100%;
+                height: auto;
+            }
+
+            .caption {
+                font-size: $font-size;
+                text-align: center;
+                line-height: 2em;
+                color: $black;
+                font-weight: bold;
+            }
+        }
+
+        .about-text{
+            width: 40%;
+
+        }
+
+    }
+}
+
+
+// mobile view
+
+@media only screen and (max-width: 768px){
+    section {
+        padding: 2em 2em;
+
+        .about-container{
+            flex-direction: column;
+            margin: 3em auto;
+
+            .polaroid{
+                width: 80%;
+                margin-bottom: 2em;
+            }
+
+            .about-text{
+                width: 80%;
+            }
+        }
+    }
+
+}

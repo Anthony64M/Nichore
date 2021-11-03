@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap');
+
+// scss COLORS variables 
+
+// primary
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%); //(graphic design text)
+$dark-blue: hsl(198, 62%, 26%); //(photography text)
+$dark-moderate-cyan: hsl(168, 34%, 41%); //(footer)
+$light-blue:#4ABEFF;
+
+// secondary
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+// $very-dark-grayish-blue: hsl(213, 9%, 39%);
+$very-dark-grayish-blue: #9fa2af;
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 100%, 1%);
+
+// scss BODY variables
+
+//size
+$font-size: 18px;
+$font-size-mobile: 14px;
+
+//fonts
+$primary-font: 'Montserrat', sans-serif;
+
+
+
+// GLOBAL STYLES
+
+
+body{
+    font-family:$primary-font;
+    font-size: $font-size;
+    font-display: swap;
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    color: $very-dark-grayish-blue;
+    line-height: 1.5em;
+}
+
+//mobile view
+
+@media only screen and (max-width: 768px){
+    p{
+       font-size: $font-size-mobile;
+    }
+}

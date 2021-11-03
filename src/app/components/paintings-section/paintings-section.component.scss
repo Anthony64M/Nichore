@@ -1,0 +1,16 @@
+section{
+    padding: 5em 5em;
+
+    h2{
+        margin-bottom: 0;
+    }
+}
+
+// mobile view
+
+@media only screen and (max-width: 768px){
+    section{
+        padding: 2em 2em;
+        text-align: center;
+    }
+}

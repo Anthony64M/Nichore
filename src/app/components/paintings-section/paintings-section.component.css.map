@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,OAAO,EAAE,OAAO;EAChB,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "paintings-section.component.scss"
+    ],
+    "names": [],
+    "file": "paintings-section.component.css"
+}
