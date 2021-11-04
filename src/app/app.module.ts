@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+// import { AuthModule } from './auth/auth.module';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 
@@ -41,6 +42,7 @@ import { SearchFilterPipe } from './shared/pipes/search-filter.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    // AuthModule,
     FormsModule
   ],
   providers: [PaintingsDataService, SearchFilterPipe],
