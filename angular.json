@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rijksmuseum-awesome-app": {
+    "Nichore": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rijksmuseum-awesome-app",
+            "outputPath": "dist/Nichore",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rijksmuseum-awesome-app:build"
+            "browserTarget": "Nichore:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rijksmuseum-awesome-app:build:production"
+              "browserTarget": "Nichore:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rijksmuseum-awesome-app:build"
+            "browserTarget": "Nichore:build"
           }
         },
         "test": {
@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rijksmuseum-awesome-app:serve"
+            "devServerTarget": "Nichore:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rijksmuseum-awesome-app:serve:production"
+              "devServerTarget": "Nichore:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "rijksmuseum-awesome-app"
+  "defaultProject": "Nichore"
 }

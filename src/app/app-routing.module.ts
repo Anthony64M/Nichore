@@ -6,6 +6,8 @@ import { HeaderComponent } from './components/header/header.component';
 import {HomeComponent} from './pages/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ActivatedRoute } from '@angular/router';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'paintings/:id', component: PaintingDetailsComponent},
   {path: 'news', component: NewsComponent},
   {path: 'contact', component: ContactComponent},
+  {path:'app-login',component:LoginComponent},
+  {path:'app-register',component:RegisterComponent},
   {path: '**', component: HomeComponent },
 ];
 

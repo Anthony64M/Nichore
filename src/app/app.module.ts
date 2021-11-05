@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-// import { AuthModule } from './auth/auth.module';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 
@@ -20,6 +19,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { PaintingDetailsComponent } from './components/painting-details/painting-details.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SearchFilterPipe } from './shared/pipes/search-filter.pipe';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -36,14 +37,17 @@ import { SearchFilterPipe } from './shared/pipes/search-filter.pipe';
     HomeComponent,
     PaintingDetailsComponent,
     FooterComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // AuthModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [PaintingsDataService, SearchFilterPipe],
   bootstrap: [AppComponent]

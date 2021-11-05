@@ -1,0 +1,56 @@
+<!-- <div class="row" id="reg">
+    <div class="col s8 offset-s2">
+      <div class="card" id="card2">
+        <div class="sm-jumbotron center-align">
+          <h4>User Registration</h4>
+        </div>
+        <form class="col s12 white" [formGroup]="form" method="POST" (submit)='submit()'  validate>
+          <div class="row">
+          <div class="input-field col s6" >
+            <label for="">User Name</label>
+            <input type="text" class="input" formControlName="username" name="username"   required>
+          </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6" >
+              <label for="">Password</label>
+              <input type="password" class="input" formControlName="password" name="password" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6" >
+              <label for="">Email</label>
+              <input class="input" type="text" formControlName="email" name="email" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+              <button class="btn-large btn-primary"  id="sub" type="submit">Register</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div> -->
+  <!-- <h1>Register works!</h1> -->
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
